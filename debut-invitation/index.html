@@ -1,0 +1,567 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Janelle Nivera's 18th Birthday Celebration — An Enchanted Evening</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;0,700;1,500;1,600&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/styles.css" />
+</head>
+<body class="locked">
+
+  <!-- Elegant Floating Sparkles & Glow Background -->
+  <div class="ambient-bg" aria-hidden="true">
+    <span class="orb orb-1"></span>
+    <span class="orb orb-2"></span>
+    <div id="sparkle-container" class="sparkle-container"></div>
+  </div>
+
+  <!-- Envelope Gate (First Screen) -->
+  <div id="envelope-gate" class="envelope-gate" aria-label="Invitation envelope">
+    <div class="envelope-wrapper">
+      <div class="envelope-flap"></div>
+      <div class="envelope-card">
+        <p class="eyebrow">An Enchanted Evening</p>
+        <h2 class="gate-title">Janelle Nivera</h2>
+        <p class="gate-sub">18th Birthday Celebration • November 29, 2026</p>
+        <button id="open-invitation-btn" class="seal-btn" type="button">
+          <span>OPEN</span>
+          <small>Tap Envelope</small>
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Floating Audio Bar -->
+  <aside id="audio-bar" class="audio-bar hidden" aria-label="Background music controls">
+    <button id="music-toggle-btn" class="audio-btn" type="button">
+      <span id="music-status-text">Pause Music</span>
+    </button>
+    <a href="https://youtu.be/9DUWRJabF_Y?si=aHVv1AaiMP8SvtTP" target="_blank" rel="noopener noreferrer" class="yt-link">
+      YouTube Track ↗
+    </a>
+  </aside>
+
+  <main id="main-content" class="main-content">
+
+    <!-- 01. CELEBRANT'S NAME AND SLIDESHOW (Photo 1 to Photo 7) -->
+    <section id="celebrant" class="section hero-section">
+      <div class="container hero-grid">
+        <div class="hero-copy alt-left">
+          <span class="badge">An Enchanted Evening</span>
+          <p class="kicker">18th Birthday Celebration</p>
+          <h1 class="celebrant-name">Janelle <em>Nivera</em></h1>
+          <p class="hero-date">November 29, 2026 • 3:30 PM • CMaya Garden Resort</p>
+          <div class="hero-actions">
+            <a href="#countdown" class="btn-primary">View Countdown</a>
+            <a href="#rsvp" class="btn-ghost">RSVP Now</a>
+          </div>
+        </div>
+
+        <div class="portrait-card alt-right">
+          <div class="slideshow" id="debut-slideshow" aria-label="Debutante photo slideshow">
+            <div class="slides-track">
+              <div class="slide active">
+                <img
+                  data-candidates="assets/photos/Photo%201.jpg,assets/photos/Photo%201.png,photos/Photo%201.jpg,photos/Photo%201.png"
+                  src="assets/photos/Photo%201.jpg"
+                  alt="Janelle Nivera Photo 1"
+                />
+              </div>
+              <div class="slide">
+                <img
+                  data-candidates="assets/photos/Photo%202.jpg,assets/photos/Photo%202.png,photos/Photo%202.jpg,photos/Photo%202.png"
+                  src="assets/photos/Photo%202.jpg"
+                  alt="Janelle Nivera Photo 2"
+                />
+              </div>
+              <div class="slide">
+                <img
+                  data-candidates="assets/photos/Photo%203.jpg,assets/photos/Photo%203.png,photos/Photo%203.jpg,photos/Photo%203.png"
+                  src="assets/photos/Photo%203.jpg"
+                  alt="Janelle Nivera Photo 3"
+                />
+              </div>
+              <div class="slide">
+                <img
+                  data-candidates="assets/photos/Photo%204.jpg,assets/photos/Photo%204.png,photos/Photo%204.jpg,photos/Photo%204.png"
+                  src="assets/photos/Photo%204.jpg"
+                  alt="Janelle Nivera Photo 4"
+                />
+              </div>
+              <div class="slide">
+                <img
+                  data-candidates="assets/photos/Photo%205.jpg,assets/photos/Photo%205.png,photos/Photo%205.jpg,photos/Photo%205.png"
+                  src="assets/photos/Photo%205.jpg"
+                  alt="Janelle Nivera Photo 5"
+                />
+              </div>
+              <div class="slide">
+                <img
+                  data-candidates="assets/photos/Photo%206.jpg,assets/photos/Photo%206.png,photos/Photo%206.jpg,photos/Photo%206.png"
+                  src="assets/photos/Photo%206.jpg"
+                  alt="Janelle Nivera Photo 6"
+                />
+              </div>
+              <div class="slide">
+                <img
+                  data-candidates="assets/photos/Photo%207.jpg,assets/photos/Photo%207.png,photos/Photo%207.jpg,photos/Photo%207.png"
+                  src="assets/photos/Photo%207.jpg"
+                  alt="Janelle Nivera Photo 7"
+                />
+              </div>
+            </div>
+
+            <button type="button" class="slide-btn prev-btn" id="debut-prev" aria-label="Previous photo">‹</button>
+            <button type="button" class="slide-btn next-btn" id="debut-next" aria-label="Next photo">›</button>
+
+            <div class="slide-dots" id="debut-dots" aria-label="Slideshow navigation"></div>
+          </div>
+
+          <div class="portrait-caption">
+            <span>Debutante • <strong id="debut-counter">1 / 7</strong></span>
+            <strong>Janelle Nivera</strong>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 02. COUNTDOWN SECTION -->
+    <section id="countdown" class="section section-alt reveal alt-right">
+      <div class="container narrow-container countdown-center">
+        <span class="section-label">02 / Counting Down</span>
+        <h2>Until the <em>Enchanted Night</em></h2>
+        <p class="section-desc center-desc">
+          Sunday, November 29, 2026 at 3:30 PM • CMaya Garden Resort
+        </p>
+
+        <div class="countdown-grid" id="countdown-timer" aria-live="polite">
+          <div class="time-box">
+            <span id="cd-days">00</span>
+            <small>Days</small>
+          </div>
+          <div class="time-box">
+            <span id="cd-hours">00</span>
+            <small>Hours</small>
+          </div>
+          <div class="time-box">
+            <span id="cd-minutes">00</span>
+            <small>Minutes</small>
+          </div>
+          <div class="time-box">
+            <span id="cd-seconds">00</span>
+            <small>Seconds</small>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 03. INVITATION MESSAGE -->
+    <section id="message" class="section reveal alt-left">
+      <div class="container narrow-container">
+        <span class="section-label">03 / Invitation Message</span>
+        <h2>An Enchanted <em>Evening</em></h2>
+        <p class="lead-message">
+          With joy in our hearts, we invite you to gather for an enchanted evening as
+          <strong>Janelle Nivera</strong> steps into her eighteenth year. Come celebrate her
+          grace, warmth, and new beginning with laughter, cherished memories, and a night to remember.
+        </p>
+      </div>
+    </section>
+
+    <!-- 04. EVENT DETAILS -->
+    <section id="details" class="section section-alt reveal alt-right">
+      <div class="container">
+        <span class="section-label">04 / Event Details</span>
+        <h2>Save the <em>Date</em></h2>
+
+        <div class="cards-3">
+          <article class="info-card">
+            <span class="info-tag">Date</span>
+            <strong>November 29, 2026</strong>
+            <small>Sunday</small>
+          </article>
+
+          <article class="info-card">
+            <span class="info-tag">Time</span>
+            <strong>3:30 PM</strong>
+            <small>Guest arrival &amp; reception</small>
+          </article>
+
+          <article class="info-card">
+            <span class="info-tag">Venue</span>
+            <strong>CMaya Garden Resort</strong>
+            <small>Celebration Reception</small>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- 05. VENUE LOCATION (Auto Slideshow Venue 1 to Venue 3 when in view) -->
+    <section id="venue" class="section reveal alt-left">
+      <div class="container venue-grid">
+        <div class="venue-photo">
+          <div class="slideshow venue-slideshow" id="venue-slideshow" aria-label="Venue location slideshow">
+            <div class="slides-track">
+              <div class="slide active">
+                <img
+                  class="smart-venue-img"
+                  data-candidates="assets/photos/venue/Venue%201.png,assets/photos/venue/Venue%201.jpg,assets/venue/Venue%201.png,assets/venue/Venue%201.jpg,assets/audio/photos/venue/Venue%201.png,assets/audio/photos/venue/Venue%201.jpg,photos/venue/Venue%201.png,photos/venue/Venue%201.jpg"
+                  src="assets/photos/venue/Venue%201.png"
+                  alt="CMaya Garden Resort View 1"
+                />
+              </div>
+              <div class="slide">
+                <img
+                  class="smart-venue-img"
+                  data-candidates="assets/photos/venue/Venue%202.png,assets/photos/venue/Venue%202.jpg,assets/venue/Venue%202.png,assets/venue/Venue%202.jpg,assets/audio/photos/venue/Venue%202.png,assets/audio/photos/venue/Venue%202.jpg,photos/venue/Venue%202.png,photos/venue/Venue%202.jpg"
+                  src="assets/photos/venue/Venue%202.png"
+                  alt="CMaya Garden Resort View 2"
+                />
+              </div>
+              <div class="slide">
+                <img
+                  class="smart-venue-img"
+                  data-candidates="assets/photos/venue/Venue%203.png,assets/photos/venue/Venue%203.jpg,assets/venue/Venue%203.png,assets/venue/Venue%203.jpg,assets/audio/photos/venue/Venue%203.png,assets/audio/photos/venue/Venue%203.jpg,photos/venue/Venue%203.png,photos/venue/Venue%203.jpg"
+                  src="assets/photos/venue/Venue%203.png"
+                  alt="CMaya Garden Resort View 3"
+                />
+              </div>
+            </div>
+            <div class="slide-dots" id="venue-dots" aria-label="Venue slideshow indicators"></div>
+          </div>
+        </div>
+
+        <div class="venue-details">
+          <span class="section-label">05 / Venue Location</span>
+          <h2>CMaya <em>Garden Resort</em></h2>
+          <p class="venue-address">
+            <strong>Venue:</strong> CMaya Garden Resort<br />
+            Tap the button below or scan the QR code to open the exact directions in Google Maps.
+          </p>
+
+          <div class="venue-actions">
+            <a href="https://maps.app.goo.gl/Du9a89jvhB5FJUsw9?g_st=ifm" target="_blank" rel="noopener noreferrer" class="btn-primary">
+              Open in Google Maps ↗
+            </a>
+          </div>
+
+          <div class="qr-box">
+            <img
+              src="https://api.qrserver.com/v1/create-qr-code/?size=160x160&data=https%3A%2F%2Fmaps.app.goo.gl%2FDu9a89jvhB5FJUsw9%3Fg_st%3Difm"
+              alt="Google Maps QR Code for CMaya Garden Resort"
+              width="140"
+              height="140"
+            />
+            <div>
+              <strong>Scan for Google Maps</strong>
+              <p>Point your phone camera at the QR code to navigate to CMaya Garden Resort.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 06. DRESS CODE & SUGGESTED GUEST COLOR MOTIF -->
+    <section id="dresscode" class="section section-alt reveal alt-right">
+      <div class="container">
+        <span class="section-label">06 / Dress Code</span>
+        <h2>Semi-Formal <em>Attire</em></h2>
+        <p class="section-desc">
+          Guests are kindly requested to come in <strong>semi-formal attire</strong> in our suggested color motif.
+        </p>
+
+        <div class="motif-panel">
+          <h3>Suggested Guest Color Motif</h3>
+          <div class="palette-grid">
+            <div class="palette-item">
+              <span class="palette-circle" style="background:#F7F3E9;"></span>
+              <strong>IVORY</strong>
+              <small>Clean &amp; Classic</small>
+              <code>#F7F3E9</code>
+            </div>
+
+            <div class="palette-item">
+              <span class="palette-circle" style="background:#D9C9B8;"></span>
+              <strong>CHAMPAGNE</strong>
+              <small>Warm Neutral</small>
+              <code>#D9C9B8</code>
+            </div>
+
+            <div class="palette-item">
+              <span class="palette-circle" style="background:#A7B18F;"></span>
+              <strong>SAGE</strong>
+              <small>Natural &amp; Soft</small>
+              <code>#A7B18F</code>
+            </div>
+
+            <div class="palette-item">
+              <span class="palette-circle" style="background:#5B6B4A;"></span>
+              <strong>OLIVE</strong>
+              <small>Earthy Depth</small>
+              <code>#5B6B4A</code>
+            </div>
+
+            <div class="palette-item">
+              <span class="palette-circle" style="background:#2F3F2E;"></span>
+              <strong>FOREST</strong>
+              <small>Rich &amp; Organic</small>
+              <code>#2F3F2E</code>
+            </div>
+
+            <div class="palette-item">
+              <span class="palette-circle" style="background:#6B4F2E;"></span>
+              <strong>MOCHA</strong>
+              <small>Warm &amp; Refined</small>
+              <code>#6B4F2E</code>
+            </div>
+
+            <div class="palette-item">
+              <span class="palette-circle" style="background:#B7A39F;"></span>
+              <strong>TAUPE</strong>
+              <small>Effortless Elegance</small>
+              <code>#B7A39F</code>
+            </div>
+
+            <div class="palette-item">
+              <span class="palette-circle" style="background:#A0747A;"></span>
+              <strong>MAUVE</strong>
+              <small>Romantic Touch</small>
+              <code>#A0747A</code>
+            </div>
+          </div>
+          <p class="motif-note">
+            Coordinated shades within this palette are warmly encouraged. Please avoid overly casual wear such as t-shirts, shorts, or slippers.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- 07. SPECIAL 18THS (Eighteen.jpg before The Eighteens) -->
+    <section id="special-18s" class="section reveal alt-left">
+      <div class="container">
+        <span class="section-label">07 / Special 18ths</span>
+        <h2>The <em>Eighteens</em></h2>
+        <p class="section-desc">
+          Honoring the special people sharing Janelle’s milestone celebration.
+        </p>
+
+        <div class="eighteen-banner">
+          <img
+            data-candidates="assets/photos/Eighteen.jpg,assets/photos/Eighteen.png,photos/Eighteen.jpg,photos/Eighteen.png,assets/Eighteen.jpg,assets/Eighteen.png"
+            src="assets/photos/Eighteen.jpg"
+            alt="Janelle Nivera The Eighteens"
+          />
+        </div>
+
+        <div class="eighteens-grid">
+          <article class="eighteen-card">
+            <h3>18 Candles</h3>
+            <ol>
+              <li>Elzen Jane Nagal</li>
+              <li>Arcy Notario</li>
+              <li>Princess Antonio</li>
+              <li>Keisha Plameras</li>
+              <li>Kristine Regaspi</li>
+              <li>Ma. Selena Tadeo</li>
+              <li>Leille Jhea Barrera</li>
+              <li>Jaren Rimando</li>
+              <li>Precious Ryan Tolentino</li>
+              <li>Lourayne Dela Cruz</li>
+              <li>Leilla Marie Panen</li>
+              <li>Lovely Dela Cruz</li>
+              <li>Yiedzel Zyron Nerpio</li>
+              <li>Leslie Ann Navalta</li>
+              <li>Elisha Imperial</li>
+              <li>Maricar Tanzon</li>
+              <li>Dianne Nagal</li>
+              <li>Lorna Nivera</li>
+            </ol>
+          </article>
+
+          <article class="eighteen-card">
+            <h3>18 Roses</h3>
+            <ol>
+              <li>Joel Nivera</li>
+              <li>Alfons Gerard Doromal</li>
+              <li>Sedfrey Feble</li>
+              <li>Christian Rapadas</li>
+              <li>Charles Kendrick Guevarra</li>
+              <li>Khian Soriano</li>
+              <li>Adonis Nerpio</li>
+              <li>Liam Rimando</li>
+              <li>Rave Abenoja</li>
+              <li>Denver Udan</li>
+              <li>Andrie Carolino</li>
+              <li>Lenard Franklin Moreno</li>
+              <li>Francis Navat</li>
+              <li>Jon Francis Gayyaman</li>
+              <li>Thirdy Тасmo</li>
+              <li>Tristan Sarmiento</li>
+              <li>Ghiser Nagal</li>
+              <li>Herminio Nagal</li>
+            </ol>
+          </article>
+
+          <article class="eighteen-card">
+            <h3>18 Gifts</h3>
+            <ol>
+              <li>Wowie Doromal</li>
+              <li>Charisma Nivera</li>
+              <li>Lireyn Dela Rosa</li>
+              <li>Kassiopeia Villanueva</li>
+              <li>Jonelyn Corpuz</li>
+              <li>Keirsten Hayce Aberin</li>
+              <li>Miguel Florentino</li>
+              <li>Yiedzel Zyron Nerpio</li>
+              <li>May Longboan</li>
+              <li>Nathan Cayat</li>
+              <li>May Kyla Monge</li>
+              <li>Shanice Miam</li>
+              <li>Marianne Joyce Sales</li>
+              <li>Krysha Apostol</li>
+              <li>Harleen Miraflor</li>
+              <li>Ashley Costales</li>
+              <li>Danica Nagal</li>
+              <li>Chrizel Acasio</li>
+            </ol>
+          </article>
+
+          <article class="eighteen-card">
+            <h3>18 Treasures</h3>
+            <ol>
+              <li>Vice Mayor Jonathan Doromal</li>
+              <li>Coun. Kristine Feble</li>
+              <li>Coun. Elmer Manalastas</li>
+              <li>Coun. Lenelyn Navidad</li>
+              <li>Richard Raquel</li>
+              <li>Desiree Locana</li>
+              <li>Armando Naranja</li>
+              <li>Guia Nagal</li>
+              <li>Ma. Cris Rena Arenas</li>
+              <li>Richy Batara</li>
+              <li>Gladys Nomil</li>
+              <li>Belsan Naranja</li>
+              <li>Jing Rosete</li>
+              <li>Dez Navasca</li>
+              <li>Arlie Naranja</li>
+              <li>Jerry Naranja</li>
+              <li>Regine Naranja</li>
+              <li>Mike Notario</li>
+            </ol>
+          </article>
+
+          <article class="eighteen-card">
+            <h3>18 Shots</h3>
+            <ol>
+              <li>Jienica Grospe</li>
+              <li>Marielle Jenica Sales</li>
+              <li>Maureen Quezon</li>
+              <li>Princess Ann Luis Sia</li>
+              <li>Leille Jhea Barrera</li>
+              <li>Cloe Anne Acosta</li>
+              <li>Jazelle Massagan</li>
+              <li>Yuri Pauchano</li>
+              <li>Roger Aranas</li>
+              <li>Denver Nomil</li>
+              <li>Adriel Miclat</li>
+              <li>Faye Burgos</li>
+              <li>Samantha Diong</li>
+              <li>Marck Wayne Naranjo</li>
+              <li>John Carlo Naboa</li>
+              <li>Aaron Aquino</li>
+              <li>Andrie Carolino</li>
+              <li>Joel Nivera</li>
+            </ol>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- 08. DEBUT RSVP & ATTENDANCE -->
+    <section id="rsvp" class="section section-alt reveal alt-right">
+      <div class="container narrow-container">
+        <div class="rsvp-card-box">
+          <span class="section-label rsvp-eyebrow">08 / Kindly Respond</span>
+          <h2 class="rsvp-heading">DEBUT RSVP &amp; <em>ATTENDANCE</em></h2>
+
+          <form id="rsvp-form" class="rsvp-form">
+            <div class="field">
+              <label for="fullName">Your Full Name</label>
+              <input id="fullName" name="fullName" type="text" required placeholder="Enter your full name" />
+            </div>
+
+            <div class="field">
+              <label>Will you grace us with your presence?</label>
+              <div class="radio-group">
+                <label class="radio-option">
+                  <input type="radio" name="attendance" value="Yes, I would love to attend." required />
+                  <span>Yes, I would love to attend.</span>
+                </label>
+
+                <label class="radio-option">
+                  <input type="radio" name="attendance" value="Yes, I will attend with my kid/s." />
+                  <span>Yes, I will attend with my kid/s.</span>
+                </label>
+
+                <label class="radio-option">
+                  <input type="radio" name="attendance" value="Declines with regret." />
+                  <span>Declines with regret.</span>
+                </label>
+              </div>
+            </div>
+
+            <!-- Dynamic Kid/s Name(s) Section (Shows when "Yes, I will attend with my kid/s." is chosen) -->
+            <div id="kids-section" class="field hidden">
+              <label>Kid/s Name(s)</label>
+              <div id="kids-inputs-list" class="kids-inputs-list">
+                <div class="kid-row">
+                  <input type="text" name="kidName[]" placeholder="Kid 1 Full Name" />
+                </div>
+              </div>
+              <button type="button" id="add-kid-btn" class="add-kid-btn">+ Add Another Kid</button>
+            </div>
+
+            <!-- Companion Name -->
+            <div id="companion-section" class="field">
+              <label for="companionName">Companion Name (If bringing an adult companion)</label>
+              <input id="companionName" name="companionName" type="text" placeholder="Enter companion's name (optional)" />
+            </div>
+
+            <!-- Reserved Seat Policy Note -->
+            <div class="rsvp-policy-note">
+              <span aria-hidden="true">📌</span>
+              <p>
+                <strong>Note:</strong> STRICTLY RESERVED SEAT/S AND SPECIAL FAVORS FOR CONFIRMED GUESTS ONLY.
+                <strong>NO RSVP, NO SEAT.</strong>
+              </p>
+            </div>
+
+            <button type="submit" id="rsvp-submit-btn" class="confirm-rsvp-btn">CONFIRM RSVP</button>
+            <p id="rsvp-status" class="rsvp-status" aria-live="polite"></p>
+          </form>
+
+          <p class="powered-by">Powered by ARC's Collection</p>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="footer">
+    <div class="container footer-inner">
+      <p>Janelle Nivera's 18th Birthday Celebration • CMaya Garden Resort</p>
+      <a href="#celebrant">Back to Top ↑</a>
+    </div>
+  </footer>
+
+  <!-- Background Audio -->
+  <audio id="bg-audio" loop preload="auto">
+    <source src="assets/audio/ytmp3free.cc_kiss-it-better-youtubemp3free.org.mp3" type="audio/mpeg" />
+  </audio>
+
+  <script src="js/main.js"></script>
+</body>
+</html>
